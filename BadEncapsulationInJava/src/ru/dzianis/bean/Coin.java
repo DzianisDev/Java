@@ -1,7 +1,7 @@
 package ru.dzianis.bean;
 
 public class Coin {
-    public double diameter; //encapsulation violation
+    private double diameter; //encapsulation violation #FIX
     private double weight; //correct encapsulation
 
     public double getDiameter(){
@@ -11,10 +11,10 @@ public class Coin {
         if(value > 0){
             diameter = value;
         }else{
-            diameter = 0.01; //default value
+            System.out.println("Negative diameter!");
         }
     }
-    public double takeWeight(){ //incorrect method name
+    public double getWeight(){ //incorrect method name #FIX
         return weight;
     }
     public void setWeight(double value){
